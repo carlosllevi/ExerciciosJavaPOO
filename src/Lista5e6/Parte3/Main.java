@@ -19,24 +19,25 @@ public class Main {
             double peso = scan.nextDouble();
             System.out.println("Produto " + i + "Preço: ");
             double preco = scan.nextDouble();
-            produtos[i] = new Produto(codigo, peso, preco);
+            Produto p = new Produto(codigo, peso, preco);
+            produtos[i] = p;
         }
 
         int k = 0; //contador de produtos com peso > 10 e preço > 50
         double somatorioPeso = 0;
-        String produtoLeve = produtos[0].codigo;
+        double produtoLeve = produtos[0].peso;
         double produtoCaro = produtos[0].preco;
         double somatorioPesosMaiores10 = 0;
         int l = 0; // pesos maiores que 10
         double j = 0;
 
         for (byte i = 0; i<n; i++) {
-            if (produtos[i].peso>10 && produtos[i].preco>50) {
+            if (produtos[i].peso>10 && produtos[i].preco<50) {
                 k+=1;
             }
             somatorioPeso += produtos[i].peso;
-            if (produtos[i].peso<produtos[i+1].peso) {
-                produtoLeve = produtos[i].codigo;
+            if (produtos[i].peso<produtoLeve) {
+                produtoLeve = produtos[i].peso;
             }
             if (produtos[i].preco> produtoCaro) {
                 produtoCaro = produtos[i+1].preco;

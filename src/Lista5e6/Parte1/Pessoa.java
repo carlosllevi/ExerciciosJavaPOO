@@ -3,7 +3,8 @@ package Lista5e6.Parte1;
 public class Pessoa {
 
     String nome;
-    int anoNascimento;
+    String cpf;
+    short anoNascimento;
     float peso;
     float altura;
     int anoAtual;
@@ -14,7 +15,7 @@ public class Pessoa {
         return peso/(altura*altura);
     }
 
-    public int idade (int anoNascimento, int anoAtual) {
+    public int idade (short anoNascimento, int anoAtual) {
         this.anoNascimento = anoNascimento;
         this.anoAtual = anoAtual;
         return anoAtual-anoNascimento;
