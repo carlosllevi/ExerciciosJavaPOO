@@ -8,4 +8,9 @@ public class Preguica extends Animal {
     public void somEmitido() {
         System.out.println("Ronca");
     }
+
+    @Override
+    public void tipo() {
+        System.out.println("Preguiça");
+    }
 }

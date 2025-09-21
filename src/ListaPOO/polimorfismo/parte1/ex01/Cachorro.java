@@ -7,4 +7,9 @@ public class Cachorro extends Animal{
     public void somEmitido() {
         System.out.println("Late");
     }
+
+    @Override
+    public void tipo() {
+        System.out.println("Cachorro");
+    }
 }

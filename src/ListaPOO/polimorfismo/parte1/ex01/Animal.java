@@ -5,7 +5,11 @@ public class Animal {
     private byte idade;
 
     public void somEmitido() {
-        System.out.println("Emitem sons diferentes");
+
+    }
+
+    public void tipo() {
+
     }
 
     public String getNome() {
@@ -22,5 +26,13 @@ public class Animal {
 
     public void setIdade(byte idade) {
         this.idade = idade;
+    }
+
+    @Override
+    public String toString() {
+        return "Animal{" +
+                "nome='" + nome + '\'' +
+                ", idade=" + idade +
+                '}';
     }
 }
